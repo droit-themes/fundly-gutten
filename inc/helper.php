@@ -283,10 +283,14 @@ function fundly_header_content() {
 			$header_id = fundly_header_footer_builder_id('header', 0);
 		}
 	}
-	if ( ! empty( apply_filters( 'the_content', get_the_content( null, false, $header_id ) ) ) ) {
-		echo apply_filters( 'the_content', get_the_content( null, false, $header_id ) );
-	} else if ( $header_id != '' && class_exists('\Elementor\Plugin' ) ) {
+
+	$builder      = get_post_meta(  $header_id, '_elementor_edit_mode', true  );
+	$page_content = get_post_field( 'post_content', $header_id );
+
+    if ( 'builder' ===  $builder && class_exists('\Elementor\Plugin' ) ) {
 		echo \Elementor\Plugin::instance()->frontend->get_builder_content_for_display( $header_id );
+	} else if ( ! empty( $page_content ) ) {
+		echo $page_content;
 	} else{
 		?>
         <header id="masthead" class="site-header sticky_nav">
@@ -324,10 +328,15 @@ function fundly_footer_from_theme() {
 		}
 	}
 
-	if ( $footer_id != '' && class_exists( '\Elementor\Plugin' ) ) {
+	$builder      = get_post_meta(  $footer_id, '_elementor_edit_mode', true  );
+	$page_content = get_post_field( 'post_content', $footer_id );
+
+    if ( 'builder' ===  $builder && class_exists('\Elementor\Plugin' ) ) {
 		echo \Elementor\Plugin::instance()->frontend->get_builder_content_for_display( $footer_id );
-	} else {
-		$footer_text = fundly_opt('footer_copyright_txt', 'Copyright &copy; 2021 <a href="#">DroitThemes</a> | All rights reserved');
+	} else if ( ! empty( $page_content ) ) {
+		echo $page_content;
+	} else{
+		$footer_text = fundly_opt('footer_copyright_txt', 'Copyright &copy; 2022 <a href="#">DroitThemes</a> | All rights reserved');
 		?>
         <footer id="colophon" class="site-footer text-center">
             <div class="site-info container">
