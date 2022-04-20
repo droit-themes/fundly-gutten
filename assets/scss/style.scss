@@ -1,0 +1,22 @@
+/*
+* fundly default stylesheed
+*/
+
+/*
+ * table of content
+*/
+@import "components/tableofcontent";
+/*
+ * bootstrap
+*/
+
+@import "./node_modules/bootstrap/scss/bootstrap";
+
+@import "components/nav";
+@import "components/blog";
+@import "components/banner";
+@import "components/default";
+/* Donarity*/
+@import "components/donarity";
+
+

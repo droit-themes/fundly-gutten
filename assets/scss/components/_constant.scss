@@ -1,0 +1,119 @@
+/*
+* define all constant here 
+*/
+
+$primary-color: #FE8F1F !default;
+$secondary-color: #076cec !default;
+$visitedlink: #181B31;
+$headding-color: #14162E;
+$link-color: #1e1e1e;
+$hovercolor: #fe8f20;
+$body-color: #6D7073;
+$placeholder-color: #899097;
+$widget_title_color:#181B31;
+$strock_color: #DFE2E7;
+$site_footer_bg: #eaeff1;
+$banner-bg: #F8F4F1;
+$body-font-family:  'Inter', sans-serif !default;
+$menu-font-family:  'Inter', sans-serif !default;
+$headings-font-family: "Merriweather", sans-serif !default;
+
+
+$body-font-size: 16px !default;
+$body-font-weight: 400 !default;
+$body-line-height: 30px !default;
+
+$h1-font-size: 40px ;
+$h2-font-size: 28px;
+$h3-font-size: 24px;
+$h4-font-size: 22px;
+$h5-font-size: 18px;
+$h6-font-size: 16px;
+$post-font-size: 14px;
+
+$h1-font-weight: 700 !default;
+$h2-font-weight: 700 !default;
+$h3-font-weight: 700 !default;
+$h4-font-weight: 700 !default;
+$h5-font-weight: 700 !default;
+$h6-font-weight: 700 !default;
+$widget-title-weight: 600;
+$font-medium-weight: 500;
+
+$h1-line-height: 1.35 !default;
+$h2-line-height: 1.35 !default;
+$h3-line-height: 1.35 !default;
+$h4-line-height: 1.35 !default;
+$h5-line-height: 1.35 !default;
+$h6-line-height: 1.35 !default;
+
+
+$color-white:    #fff;
+$color-black:    #000 !default;
+$color-read: #FF0000 !default;
+
+
+$link-transition: all .3s !default;
+
+
+
+/**
+* Define All CSS Variable
+* Convert SCSS to CSS Variable
+**/
+
+:root {
+  --primary-color: var(--theme_color_opt, #{$primary-color});
+  --secondary-color: #{$secondary-color}; //
+  --link-color: var(--theme_link_color_opt, #{$link-color});
+  --hovercolor: var(--theme_hover_color_opt, #{$hovercolor}); //
+  --body-color: var(--theme_body_color_opt, #{$body-color});//
+  --headings-color: var(--theme_title_color_opt, #{$headding-color}) !important;//
+  --visitedlink: #{$visitedlink}; //
+  --placeholder-color: #{$placeholder-color};//
+  --widget_title_color: #{$widget_title_color}; //
+  --strock_color: #{$strock_color};
+  --site_footer_bg: #{$site_footer_bg};//
+
+  --body-font-family: #{$body-font-family} ;//
+  --menu-font-family: #{$menu-font-family}; //
+  --headings-font-family: #{$headings-font-family}; //
+
+
+  --body-font-size: var(--body_typoraphy, #{$body-font-size}) ; //
+  --body-font-weight: var(--body_typoraphy, #{$body-font-weight}); //
+  --body-line-height: var(--body_typoraphy, #{$body-line-height}); //
+
+
+  --h1-font-size: #{$h1-font-size}; //
+  --h2-font-size: #{$h2-font-size}; //
+  --h3-font-size: #{$h3-font-size}; //
+  --h4-font-size: #{$h4-font-size}; //
+  --h5-font-size: #{$h5-font-size}; //
+  --h6-font-size: #{$h6-font-size}; //
+  --post-font-size: #{$post-font-size}; //
+
+  --h1-font-weight: #{$h1-font-weight}; //
+  --h2-font-weight: #{$h2-font-weight}; //
+  --h3-font-weight: #{$h3-font-weight}; //
+  --h4-font-weight: #{$h4-font-weight}; //
+  --h5-font-weight: #{$h5-font-weight}; //
+  --h6-font-weight: #{$h6-font-weight}; //
+  --widget-title-weight: #{$widget-title-weight};
+  --font-medium-weight: #{$font-medium-weight};
+
+
+  --h1-line-height: #{$h1-line-height};
+  --h2-line-height: #{$h2-line-height};
+  --h3-line-height: #{$h3-line-height};
+  --h4-line-height: #{$h4-line-height};
+  --h5-line-height: #{$h5-line-height};
+  --h6-line-height: #{$h6-line-height};
+
+
+  --color-white: #{$color-white};
+  --color-black: #{$color-black};
+  --color-read: #{$color-read};
+  --link-transition: #{$link-transition};
+  --banner-bg: #{$banner-bg}
+}

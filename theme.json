@@ -1,0 +1,13 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/theme.json",
+	"version": 2,
+	"settings": {
+		"appearanceTools": true,
+        "spacing": {
+			"blockGap": true,
+			"customPadding": true,
+			"customMargin": true,
+			"units": [ "%", "px", "em", "rem", "vh", "vw" ]
+		}
+    }
+}

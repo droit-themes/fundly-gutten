@@ -1,0 +1,376 @@
+.give-progress-bar{
+  span{
+    background-color:  var(--primary-color);
+  }
+}
+
+.give-wrap{
+  .donation-feature-image{
+    margin-bottom: 50px;
+  }
+  .single-gol-progress{
+    margin-bottom: 50px;
+    .give-progress-bar{
+      background: #DDDADA;
+      height: 9px;
+      border-radius: 0px;
+    }
+    .d-flex {
+      align-items: center;
+    }
+    .count-percentage{
+      font-size: 18px;
+      line-height: 25px;
+      color: #6F7A87;
+      font-family: $body-font-family;
+      margin-left: 15px;
+    }
+  }
+  .give-goal-progress{
+    .raised{
+      font-size: 18px;
+      font-weight: 400;
+      color: $body-color;
+      font-family: $body-font-family;
+      .fd{
+        span{
+          &:first-child{
+            font-weight: 600;
+          }
+        }
+      }
+    }
+  }
+  .donation-single-title{
+    h2{
+      font-family: $headings-font-family;
+      font-size: $h1-font-size;
+      color: $headding-color;
+      margin-bottom: 32px;
+      text-align: center;
+    }
+  }
+  .donation-form{
+    text-align: center;
+  }
+  .give-form-content-wrap {
+    p{
+      color: $body-color;
+      font-family: $body-font-family;
+      font-size: $body-font-size;
+      line-height: $body-line-height;
+    }
+    h3{
+      font-family: $headings-font-family;
+      font-size: $h2-font-size;
+      color: $headding-color;
+      margin-top: 45px;
+    }
+    blockquote{
+      border: 0px;
+      background: transparent;
+      border-radius: 0px;
+      box-shadow: none;
+      padding: 0px 70px 0px;
+      &:before,&:after{
+        display: none;
+      }
+      p{
+        text-align: center;
+        font-family: $headings-font-family;
+        font-size: $h4-font-size;
+        line-height: 40px;
+        color: $primary-color;
+        margin-bottom: 22px;
+      }
+    }
+    p{
+      img{
+        padding-top: 30px;
+      }
+    }
+    ul{
+      list-style: none;
+      padding-left: 0;
+      display: inline-flex;
+      flex-wrap: wrap;
+      flex-direction: column;
+      font-family: $body-font-family;
+      font-size: $body-font-size;
+      color: $body-color;
+      li{
+        position: relative;
+        &::before{
+          content: "";
+          width: 6px;
+          height: 6px;
+          border-radius: 50%;
+          position: relative;
+          display: inline-block;
+          top: -3px;
+          margin-right: 8px;
+          background:$primary-color;
+        }
+      }
+    }
+  }
+  h4{
+    font-family: $headings-font-family;
+    font-size: 35px;
+    color: $headding-color;
+    margin-top: 45px;
+    margin-bottom: 45px;
+  }
+  h6{
+    font-family: $body-font-family;
+    font-size: 20px;
+    color: $headding-color;
+    margin-bottom: 35px;
+  }
+  form[id*=give-form]{
+    max-width: 690px;
+    .give-total-wrap{
+      .give-donation-amount {
+        .give-currency-symbol{
+          display: none;
+        }
+        input.give-text-input#give-amount {
+          border: 1px solid #CCCCCC;
+          height: 62px;
+          width: 293px;
+          color: #BDBCBC;
+          padding-left: 25px;
+          @include placeholder {
+            color:#BDBCBC;
+          }
+        }
+      }
+    }
+    .give-donation-amount{
+      margin-bottom: 25px;
+    }
+    .give-payment-mode-label{
+      font-size: 20px;
+      font-weight: 600;
+      color: #020202;
+      font-family: $body-font-family;
+      border: 0px;
+    }
+    #give-gateway-radio-list{
+      li{
+        input[type=radio]{
+          opacity: 0;
+          visibility: hidden;
+          display: none;
+            &:checked{
+              & + label{
+                &:before{
+                  background: $primary-color;
+                  border-color: $primary-color;
+                }
+                &:after{
+                  opacity: 1;
+                }
+              }
+            }
+        }
+        label{
+          font-size: 18px;
+          line-height: 27px;
+          padding-left: 30px;
+          font-family: $body-font-family;
+          color: #6D7073;
+          position: relative;
+          &:before{
+            content: "";
+            width: 20px;
+            height: 20px;
+            border: 1px solid #C4C4C4;
+            border-radius: 2px;
+            position: absolute;
+            left: 0;
+            top: 0;
+            display: block;
+          }
+          &:after{
+            content: "";
+            background: url('https://fundly.droitlab.com/wp-content/uploads/2022/01/MicrosoftTeams-image.png') no-repeat scroll center center;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 20px;
+            height: 20px;
+            line-height: 20px;
+            opacity: 0;
+            transition: all 0.3s;
+          }
+        }
+      }
+    }
+    #give_checkout_user_info{
+      p{
+        margin-bottom: 20px;
+      }
+      legend{
+        font-size: 20px;
+        font-family: $body-font-family;
+        color: $headding-color;
+        border: 0px;
+      }
+      label{
+        display: none;
+      }
+      input{
+        border: 1px solid #BDBCBC;
+        border-radius: 0px;
+        height: 62px;
+        padding-left: 25px;
+        font-size: 18px;
+        color: $headding-color;
+        background: #fff;
+        @include placeholder {
+          color: #BDBCBC
+        }
+      }
+    }
+    #give_offline_payment_info{
+      p{
+        font-family: $body-font-family;
+        color: $body-color;
+        font-size: $body-font-size;
+        margin-bottom: 0.9em;
+      }
+      ol{
+        li{
+          font-family: $body-font-family;
+          font-size: $body-font-size;
+          color: $body-color;
+        }
+        & + p{
+          line-height: 28px;
+        }
+      }
+    }
+    .give-donation-submit{
+      #give-final-total-wrap{
+        .give-donation-total-label,.give-final-total-amount{
+          border: 0px;
+          background: transparent;
+          padding: 0px;
+          font-family: $body-font-family;
+          font-size: 20px;
+          font-weight: 600;
+        }
+        .give-final-total-amount{
+          color: $body-color;
+          font-weight: 400;
+        }
+      }
+    }
+    .give-submit-button-wrap{
+      .give-btn{
+        font-size: 16px;
+        font-family: $body-font-family;
+        color: #fff;
+        background: $primary-color;
+        padding: 20px 40px;
+        font-weight: 500;
+        border: 0px;
+        border-radius: 0px;
+        transition: all 0.2s;
+        box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.15);
+        &:hover{
+          background: #413535;
+        }
+      }
+    }
+    #give-referral-wrap{
+      display: none;
+      & + .give-btn.give-btn-donarity_single{
+        display: none;
+      }
+    }
+    .give-btn.give-btn-donarity_single{
+      display: none;
+    }
+  }
+  .give-donation-levels-wrap{
+    li{
+      margin-right: 10px !important;
+      button{
+        background: #fff;
+        border: 1px solid #CCCCCC;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 19px;
+        color: #6D7073;
+        padding: 10px 16px;
+        border-radius: 0px;
+        font-family: $body-font-family;
+        transition: all 0.2s linear;
+        &:hover{
+          background: #FE8F1F;
+          border-color: #FE8F1F;
+          color: #fff;
+          box-shadow: 0px 4px 25px rgba(241, 91, 67, 0.25);
+        }
+        &.give-btn-level-custom{
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+
+
+.fundly_donate_area{
+  background: #F6F6F6;
+  position: relative;
+  padding: 100px 0px;
+  z-index: 1;
+  &:before{
+    content: "";
+    background: url("../images/donate.png") no-repeat scroll center 0 / cover;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    left: 0;
+    top: 0;
+  }
+}
+.fundly_donate_content{
+  padding-right: 80px;
+  h2{
+    font-size: 50px;
+    line-height: 55px;
+    font-weight: 700;
+    color: #14162E;
+    font-family: "Merriweather", sans-serif;
+    margin-bottom: 25px;
+  }
+  p{
+    font-size: 20px;
+    line-height: 30px;
+    color: #6D7073;
+    font-family: "Inter", sans-serif;
+  }
+}
+.choose_t{
+  font-size: 20px;
+  line-height: 30px;
+  color: #14162E;
+  font-family: "Inter", sans-serif;
+  margin-bottom: 25px;
+}
+
+@media (max-width: 767px){
+  .give-wrap .give-form-content-wrap blockquote {
+		padding: 0px 10px;
+	}
+	.give-wrap .give-form-content-wrap blockquote p {
+		font-size: 16px;
+		line-height: 30px;
+	}
+}

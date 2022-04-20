@@ -1,0 +1,40 @@
+{
+  "name": "fundly",
+  "version": "1.0.0",
+  "description": "fundly donation wordpress theme",
+  "main": "gulpfile.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/droit-themes/fundly.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/droit-themes/fundly/issues"
+  },
+  "homepage": "https://github.com/droit-themes/fundly#readme",
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^8.0.0",
+    "gulp-clean-css": "^4.3.0",
+    "gulp-replace": "^1.1.3",
+    "gulp-sass": "^5.1.0",
+    "gulp-zip": "^5.1.0",
+    "sass": "^1.49.7"
+  },
+  "dependencies": {
+    "bootstrap": "^5.1.3",
+    "gulp-beautify": "^3.0.0",
+    "gulp-fs": "^0.0.2",
+    "gulp-if": "^3.0.0",
+    "gulp-sourcemaps": "^3.0.0",
+    "yargs": "^17.3.1"
+  }
+}

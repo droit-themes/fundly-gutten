@@ -1,0 +1,649 @@
+/* Home Page 1 */
+/* Header */
+.absolute-menu {
+    position: absolute !important;
+    top: 0;
+    z-index: 9;
+}
+.absolute-menu.drdt_sticky_fixed {
+	position: fixed !important;
+	z-index: 9999;
+	background-color: #fff !important;
+}
+
+.absolute-menu.drdt_sticky_fixed .nav-button-1 a {
+	color: #6A6A6A !important;
+}
+
+.absolute-menu.drdt_sticky_fixed .nav-button-1 a:hover {
+	color: #FE8F1F !important;
+}
+
+.absolute-menu.drdt_sticky_fixed .nav-button-2 a {
+	color: #6A6A6A !important;
+}
+
+.absolute-menu.drdt_sticky_fixed .nav-button-2 a:hover {
+	color: #F15B43 !important;
+}
+
+.nav-menu-1 .current-menu-parent .drdt-menu-item {
+	color: #3AE9A2 !important;
+}
+
+@media (min-width: 768px){
+.drdt_navmenu .menu-item .sub-menu {
+    top: 100% !important;
+ }
+}
+.admin-bar .absolute-menu{
+	top: 32px;
+}
+.admin-bar .absolute-menu.drdt_sticky_fixed {
+    top: 32px !important;
+}
+@media (max-width: 767px){
+	.absolute-menu .elementor-column:nth-child(1){
+		flex: 0 0 25%	
+	}
+	.absolute-menu .elementor-column {
+		   flex: 0 0 67%;
+	}
+	.absolute-menu .elementor-column:nth-child(2){
+		flex: 1;
+	}
+	.absolute-menu .hamburgar-col {
+		order: 3 !important;
+ }
+	.admin-bar .absolute-menu {
+		top: 46px;
+	}
+	.home_news_list_item .media-body {
+		align-items: flex-end;
+		flex-direction: column;
+	}
+	.nav-menu-1 .drdt-nav-menu-icon svg path{
+		fill: rgb(30, 30, 30);
+	}
+	.nav-menu-1.global .drdt-nav-menu-icon svg path {
+    fill: rgb(255 255 255);
+    }
+	.drdt_sticky_fixed .nav-menu-1 .drdt-nav-menu-icon svg path{
+		fill: rgb(30, 30, 30);
+	}
+}
+
+@media (max-width: 555px){
+.absolute-menu .elementor-column:nth-child(3) {
+    display: none;
+ }
+	.absolute-menu .elementor-column:nth-child(1){
+		flex: 1;
+	}
+}
+/* Down Button */
+.down-btn span.elementor-button-content-wrapper {
+	position: relative;
+}
+
+.down-btn span.elementor-button-icon.elementor-align-icon-right {
+	position: absolute;
+	top: 30px;
+  font-size: 12px;
+}
+
+/* Latest Causes */
+
+
+.give-goal-progress {
+	margin-bottom: 0;
+}
+
+/* Give Form */
+.dl-give-up-form-only .give-form .give-btn.give-btn-modal i , .dl-give-up-form-only .give-form .give-btn.give-btn-reveal {
+    font-size: 20px;
+    margin-left: 15px;
+}
+
+.dl-give-up-form-only .give-form-wrap {
+	padding-top: 18px;
+	padding-bottom: 18px
+}
+
+/* Home Page 1 */
+
+/* Home Page 2 */
+/* Blog Section */
+.blog_title_bottom .droit-blog-grid-entry-title.dl_title::after {
+    content: "";
+    display: block;
+    width: 30px;
+    height: 1px;
+    background-color: #5EA998;
+    margin-top: 25px;
+}
+
+/*  Subscribe Form Button */
+
+.subscribe-btn .dl_pro_subscribe_form .dl_cu_btn::after {
+    content: "\e94d";
+    font-family: 'Droit Icons';
+    display: inline-block;
+    font-size: 13px;
+    margin-left: 10px;
+    font-weight: 400;
+}
+
+/* Home Page 2 */
+
+
+/* About Us Page */
+
+/* Testimonial Section Shape Image Size Control */
+
+.testimonial_shape_img_control .layer.layer2 img {
+	width: 47px;
+	height: 38px;
+}
+
+/* Icon Box Section Hover Stylel */
+
+.icon_box_hover_style:hover .dl_icon_box_colum .dl_icon_box_wrapper.dl_style_01 .droit-icon-description span.icon_desc , .icon_box_hover_style:hover .dl_icon_box_colum .dl_icon_box_wrapper.dl_style_01 .droit-icon-description .icon_title h5 span , .icon_box_hover_style:hover li span i {
+	color: #fff !important;
+}
+
+.icon_box_hover_style:hover .dl_icon_box_colum .dl_icon_box_wrapper.dl_style_01 .dl_icon_wrapper .dl_icon.dl_color_1 svg path {
+	fill: #fff !important;
+}
+
+.icon_box_hover_style:hover > .elementor-element-populated::after {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    background: url("https://donority.droitlab.com/wp-content/uploads/2021/12/Group-47342-1.png") no-repeat scroll bottom right;
+    content: "";
+    position: absolute;
+}
+
+/* About Us Page */
+
+/* Our Service Page */
+/* Blog */
+.our_service_blog .dl_blog_grid_masonory_post.style_8 .dl_post_meta {
+    padding-left: 0;
+    margin-top: 0;
+}
+
+/* Why Do This */
+.button-hover .dl-infobox-content-area .droit-infobox-button {
+	border-color: transparent;
+}
+.button-hover .dl-infobox-content-area .droit-infobox-button:hover {
+    border-bottom: 1px solid #fff;
+}
+
+/* Countdown  */
+.fun-fact-control .droit-fun-fact-media {
+	width: 60px;
+  height: 55px;
+}
+
+/* Our Service Page */
+
+/* Volunteer Page */
+.dl_accordion_item .elementor-widget-container p {
+	margin-bottom: 0;
+}
+.recent-project-grid .item-content h3 {
+	margin-bottom: 0;
+}
+.recent-project-grid .item-content h3 a {
+	color: #14162E;
+	font-family: Inter;
+	font-weight: 600;
+	font-size: 22px;
+	line-height: 30px;
+}
+.recent-project-grid .item-content .dl_latest_project__category a {
+	color: #6D7073;
+	font-family: Inter;
+	font-weight: 400;
+	font-size: 14px;
+	line-height: 19px;
+}
+
+.volunteer-reg-form .dl_contact_form_wrapper.dl_cf7_form_02 .wpcf7-form-control.wpcf7-checkbox {
+	margin: 0;
+	padding: 0;
+}
+
+.volunteer-reg-form .dl_contact_form_wrapper.dl_cf7_form_02 .wpcf7-form-control.wpcf7-checkbox .wpcf7-list-item {
+	margin: 0;
+}
+
+.volunteer-reg-form .dl_contact_form_wrapper.wpcf7_default .wpcf7-submit {
+	background-color: #30BA78;
+	width: 170px;
+	height: 50px;
+	color: #fff;
+	font-family: Inter;
+	font-weight: 600;
+	font-size: 16px;
+	line-height: 18px;
+	margin-top:-15px;
+}
+
+.volunteer-reg-form .dl_contact_form_wrapper.wpcf7_default .wpcf7-submit:hover {
+	background-color: #413535;
+}
+
+.volunteer-reg-form .user-icon {
+	 height: 110px;
+}
+
+.volunteer-reg-form input[type="checkbox"] {
+    position: relative;
+	  margin-right: 10px;
+	  cursor: pointer;
+}
+.volunteer-reg-form input[type="checkbox"]::after {
+    content: "";
+    width: 14px;
+    height: 14px;
+    background-color: #ffffff;
+	  border: 1px solid #D9DDE3;
+    position: absolute;
+}
+.volunteer-reg-form input[type="checkbox"]::before {
+    position: absolute;
+    content: "";
+    background-image: url(https://donority.droitlab.com/wp-content/uploads/2022/01/MicrosoftTeams-image.png);
+    height: 14px;
+    width: 14px;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    background-repeat: no-repeat;
+    background-position: center;
+	  opacity: 0;
+}
+
+.volunteer-reg-form input[type="checkbox"]:checked::before
+{
+	opacity: 1;
+	background-color: #30BA78;
+}
+
+/* Volunteer Page */
+
+/* Mission Page */
+.g-form-2 .dl-give-form .dl_lates_causes_content .give-card__category a {
+	background-color: transparent;
+}
+/* Mission Page */
+
+/* Faq Page */
+.faq-section-tab .dl_tab_menu_item.dl_active .droit-tab-title {
+    display: block;
+    width: auto;
+    border-bottom: 1px solid;
+	  padding-bottom: 5px;
+}
+.faq-section-tab .dl_tab_menu_item:before{
+	display: none;
+}
+/* Faq Page */
+
+/* Contact Us Page */
+.contact-us-form .dl_contact_form_wrapper.wpcf7_default .wpcf7-form-control {
+  	height: 62px;
+    margin-top: 10px;
+    padding: 0;
+    padding-top: 5px;
+    margin-right: 5px;
+}
+.contact-us-form .wpcf7-list-item {
+	margin: 0;
+}
+.contact-us-form .wpcf7-list-item label input {
+	margin-right: 10px;
+}
+.contact-us-form .check-area {
+    display: flex;
+    align-items: center;
+	  margin-top: -30px;
+}
+.contact-us-form .check-control {
+    color: #30BA78;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+	margin-top: -5px;
+}
+.contact-us-form .droit-contact-form-7 input.wpcf7-form-control.wpcf7-text:focus , .contact-us-form .droit-contact-form-7 textarea.wpcf7-form-control.wpcf7-textarea:focus {
+    border-color: #30BA78 !important;
+	  color: #6D7073;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 30px;
+	  background-color: #FCFCFC!important;
+}
+.contact-us-form input[type="checkbox"] {
+	  position: relative;
+    margin-right: 10px;
+    cursor: pointer;
+}
+.contact-us-form input[type="checkbox"]::after {
+    content: "";
+    width: 14px;
+    height: 14px;
+    background-color: #ffffff;
+    border: 1px solid #D9DDE3;
+    position: absolute;
+}
+.contact-us-form input[type="checkbox"]::before {
+    position: absolute;
+    content: "";
+    background-image: url(https://donority.droitlab.com/wp-content/uploads/2022/01/MicrosoftTeams-image.png);
+    height: 14px;
+    width: 14px;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 0;
+}
+.contact-us-form input[type="checkbox"]:checked::before
+{
+	opacity: 1;
+	background-color: #30BA78;
+}
+/* Contact Us Page */
+
+/* Donors Page */
+.donor-tab-control ul.dl_tab_menu.droit-advance-navs {
+	display: flex;
+  justify-content: center;
+}
+/* Donors Page */
+
+/* Home One */
+@media (max-width: 767px){
+	.dl-video-wrapper-pro .droit-buttons{
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+	.dl-video-wrapper-pro .droit-buttons i{
+		transform: translate(0, 0) !important;
+	}
+}
+/* Home One */
+.service_inner > .elementor-widget-wrap {
+    max-width: 550px;
+    margin-left: auto;
+    margin-right: 90px;
+}
+
+.droit-advance-accordions .droit-accordion-wrapper:last-child {
+	border-bottom: 0 !important;
+}
+@media (max-width: 1440px){
+	.service_inner > .elementor-widget-wrap{
+		margin-right:74px;
+	}
+}
+@media (max-width: 880px){
+	.service_inner > .elementor-widget-wrap{
+		max-width: 100%;
+		margin-right: auto;
+	}
+}
+/* Service Page */
+@media (max-width: 459px) {
+	.br-control {
+		display: none;
+	}
+}
+/* Service Page */
+
+/* Volunteer Page */
+
+@media (max-width: 767px) {
+	.recent-project-grid .col-md-4.position-relative {
+		margin-bottom:20px
+	}
+	.g-form-2 .dl_latest_causes_item {
+		max-width: 370px;
+		margin: 0 auto 30px;
+	}
+	.give-wrap .give-form-content-wrap blockquote {
+		padding: 0px 10px;
+	}
+	.give-wrap .give-form-content-wrap blockquote p {
+		font-size: 16px;
+		line-height: 30px;
+	}
+}
+@media (max-width: 576px){
+	.donor-tab-control ul.dl_tab_menu.droit-advance-navs{
+		display: block;
+		padding-bottom: 30px;
+	}
+	.donor-tab-control ul.dl_tab_menu.droit-advance-navs li{
+		    margin-bottom: 10px !important;
+		text-align: center;
+	}
+}
+/* Volunteer Page */
+
+/* Home Two */
+.drdt_sticky_fixed .nav-btn-1 a:hover {
+	border: 1px solid #F15B43;
+}
+.home-1-give .dl-give-up-form-only .give-form .give-btn.give-btn-reveal {
+	margin: 0;
+}
+.home-1-give .dl-give-up-form-only .give-form .give-btn.give-btn-reveal i {
+	font-size: 18px;
+	vertical-align: middle;
+	margin-left: 10px;
+}
+.dl_banner_slider .dl_container .banner_slider_content a span.icon:hover {
+    background-color: #000 !important;
+}
+.btn-icon-size i.dlicon {
+    font-size: 14px;
+}
+.btn-icon-size-2 i.dlicon {
+    font-size: 8px;
+}
+
+.case-study-tab .droit-tab-title {
+    text-align: center;
+    padding: 5px 0;
+    border-right: 1px solid #EDEDED;
+}
+
+.case-study-tab ul.dl_tab_menu.droit-advance-navs .dl_tab_menu_item:last-child .droit-tab-title {
+	border-right: 0;
+}
+
+
+.case-study-tab .item-content {
+    bottom: 10px;
+    left: 20px;
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+.accordion_control .elementor-accordion .elementor-accordion-item {
+    border: 1px solid #d4d4d4;
+    background-color: #fff;
+    box-shadow: 0px 0px 30px rgb(79 88 162 / 10%);
+    border-radius: 3px;
+	margin-top: 30px;
+}
+
+.tab-price-color {
+	color: #59CD56;
+	font-family: Inter;
+	font-weight: 700;
+	font-size: 20px;
+}
+
+.home_3_tab .dl-video-wrapper-pro .droit-buttons i {
+	transform: translate(0px, 30px) !important;
+}
+
+.case-study-tab .recent-project-grid .item-content h3 a:hover {
+    color: #30BA78;
+}
+
+.search_cart:before {
+	display: none !important;
+}
+
+@media (min-width: 1200px) {
+	
+.case-study-tab ul.dl_tab_menu.droit-advance-navs {
+    margin: 0 auto;
+    width: 870px;
+ }
+}
+
+@media (min-width: 768px) {
+	.dl_banner_slider .dl_container .banner_slider_content {
+		padding-left: 25px;
+	}
+}
+@media (max-width: 768px) {
+	.banner-slider-control .banner_slider_content {
+    margin-top: -95px;
+ }
+ .home_news_list_item .media-body {
+    align-items: flex-start;
+      flex-direction: column;
+  }
+    .dl-give-up-form-only .give-form-wrap   {
+        padding: 25px;
+    }
+    .dl-give-up-form-only #give-donation-level-button-wrap.give-donation-levels-wrap {
+        grid-template-columns: auto auto;
+    }
+}
+@media(max-width: 767px) {
+	.case-study-tab ul.dl_tab_menu.droit-advance-navs .dl_tab_menu_item:nth-child(2) .droit-tab-title, 
+	.case-study-tab ul.dl_tab_menu.droit-advance-navs .dl_tab_menu_item:nth-child(4) .droit-tab-title {
+     border-right: 0;
+  }
+}
+@media (max-width: 480px) {
+    form[id*=give-form] #give-final-total-wrap {
+        display: flex;
+    }
+}
+@media (max-width: 360px) {
+ .banner-slider-control .banner_slider_content {
+    margin-top: 0;
+ }
+}
+
+.nav_info .swiper-button-next:hover, .nav_info .swiper-button-prev:hover {
+    background: #ffac00;
+    border-color: #ffac00;
+    color: #fff;
+}
+.give-form-style-two .form-details.style-2 .give-form #give-referral-wrap .give-label input:checked::before {
+    opacity: 1;
+    background-color:#00CE72;
+}
+
+.search_cart .nav-item {
+	padding: 20px 0 !important;
+}
+
+.recent-project-nav .list-inline-item:hover {
+	background: #00CE72;
+}
+
+.b-footer-text a ,
+.b-footer-text-2 a ,
+.b-footer-text-3 a {
+    color: #8A8A8A !important;
+}
+
+.b-footer-text a:hover {
+    color: #3AE9A2 !important;
+}
+
+.b-footer-text-2 a:hover {
+    color: #FFAC00 !important;
+}
+
+.b-footer-text-3 a:hover {
+    color: #F05A41 !important;
+}
+
+.transparent-banner-active .blog_breadcrumbs_area_two {
+    background-size: contain !important;
+}
+
+.give-form-style-two form[id*=give-form] .give-donation-amount #give-amount-text, .give-form-style-two form[id*=give-form] .give-donation-amount .give-text-input#give-amount {
+	color: #6A6A6A;
+	font-size: 15px;
+}
+
+.give-form-style-two .give-btn.give-default-level {
+    background-color: #00CE72;
+	color: #fff;
+	border-color: #00CE72;
+}
+
+.give-form-style-two #give-donation-level-button-wrap>li:last-child {
+	margin-top: 20px;
+}
+
+.home-2cc .dl_carousel_slider .item-footer .btn.btn-danger {
+    color: #212226 !important;
+}
+
+.home-2cc .dl_carousel_slider .item-footer .btn.btn-danger:hover {
+	color: #fff !important;
+}
+
+.breadcrumb_content {
+	margin: 0!important;
+	text-align: left !important;
+}
+
+.transparent-banner-active .blog_breadcrumbs_area_two .page_title {
+	text-align: left !important;
+	font-size: 75px !important;
+}
+
+.single-post .breadcrumb_content .page_title.text-break {
+	font-size: 55px !important;
+}
+
+.post-meta {
+	text-align: left;
+}
+
+.breadcrumbs {
+    text-align: left;
+}
+
+/* Home Two */
+
+/** Gutenberg Demo CSS **/
+.fundly-container {
+    width: 70%;
+    margin: 0 auto;
+}
+.fundly-slider {
+    margin-bottom: 0px !important;
+    padding: 100px 0 0 0 !important;
+}
