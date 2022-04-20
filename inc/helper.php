@@ -290,7 +290,9 @@ function fundly_header_content() {
     if ( 'builder' ===  $builder && class_exists('\Elementor\Plugin' ) ) {
 		echo \Elementor\Plugin::instance()->frontend->get_builder_content_for_display( $header_id );
 	} else if ( ! empty( $page_content ) ) {
-		echo $page_content;
+		$post_content = get_post( $header_id );
+		$content = $post_content->post_content;
+		echo apply_filters( 'the_content', $content );
 	} else{
 		?>
         <header id="masthead" class="site-header sticky_nav">
@@ -334,7 +336,9 @@ function fundly_footer_from_theme() {
     if ( 'builder' ===  $builder && class_exists('\Elementor\Plugin' ) ) {
 		echo \Elementor\Plugin::instance()->frontend->get_builder_content_for_display( $footer_id );
 	} else if ( ! empty( $page_content ) ) {
-		echo $page_content;
+		$post_content = get_post( $footer_id );
+		$content = $post_content->post_content;
+		echo apply_filters( 'the_content', $content );
 	} else{
 		$footer_text = fundly_opt('footer_copyright_txt', 'Copyright &copy; 2022 <a href="#">DroitThemes</a> | All rights reserved');
 		?>
