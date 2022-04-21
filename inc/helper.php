@@ -291,7 +291,10 @@ function fundly_header_content() {
 		echo \Elementor\Plugin::instance()->frontend->get_builder_content_for_display( $header_id );
 	} else if ( ! empty( $page_content ) ) {
 		$post_content = get_post( $header_id );
-		$content = $post_content->post_content;
+		$content      = $post_content->post_content;
+		$css          = get_post_meta( $header_id, '__db_css', true );
+
+		echo '<style type="text/css" id="droit-blocks-header-css">' . $css . '</style>'; // phpcs:ignore
 		echo apply_filters( 'the_content', $content );
 	} else{
 		?>
@@ -337,7 +340,10 @@ function fundly_footer_from_theme() {
 		echo \Elementor\Plugin::instance()->frontend->get_builder_content_for_display( $footer_id );
 	} else if ( ! empty( $page_content ) ) {
 		$post_content = get_post( $footer_id );
-		$content = $post_content->post_content;
+		$content      = $post_content->post_content;
+		$css          = get_post_meta( $footer_id, '__db_css', true );
+
+		echo '<style type="text/css" id="droit-blocks-footer-css">' . $css . '</style>'; // phpcs:ignore
 		echo apply_filters( 'the_content', $content );
 	} else{
 		$footer_text = fundly_opt('footer_copyright_txt', 'Copyright &copy; 2022 <a href="#">DroitThemes</a> | All rights reserved');
@@ -349,6 +355,4 @@ function fundly_footer_from_theme() {
         </footer><!-- #colophon -->
 		<?php
 	}
-
-
 }
