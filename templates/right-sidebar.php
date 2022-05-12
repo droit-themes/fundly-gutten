@@ -1,6 +1,6 @@
 <?php
 /**
- * template Name: Fundly Right Sidebar
+ * Template Name: Fundly Right Sidebar
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
@@ -13,9 +13,10 @@ get_header();
 
 	<main id="primary" class="site-main">
 
-		<?php get_template_part('template-parts/banner/banner', 'page');
+		<?php
+		get_template_part( 'template-parts/banner/banner', 'page' );
 
-	    fundly_wrapper_start( 'right');
+		fundly_wrapper_start( 'right' );
 
 		while ( have_posts() ) :
 			the_post();

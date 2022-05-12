@@ -152,7 +152,8 @@ h6 {
 
 .fundly-container {
 	width: 70%;
-	margin-inline: auto;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 .fundly-slider {
@@ -194,7 +195,8 @@ h6 {
 
 .fundly-subtitle {
 	max-width: 660px !important;
-	margin-inline: auto !important;
+	margin-left: auto !important;
+	margin-right: auto !important;
 	text-align: center;
 }
 
@@ -257,11 +259,11 @@ body {
 		margin-bottom: var(--f-content-spacing);
 
 		&:first-child {
-			margin-top: 0px !important;
+			margin-top: 0px;
 		}
 
 		&:last-child {
-			margin-bottom: 0px !important;
+			margin-bottom: 0px;
 		}
 
 		&:not(.alignwide):not(.alignfull) {
@@ -312,18 +314,25 @@ body {
 
 	[class*="_inner-container"], [class*="wp-container-"] {
 		width: 100%;
-
+		
 		>* {
 			&:not(.no-inline-space) {
-				margin-inline: auto;
+				margin-left: auto;
+				margin-right: auto;
 			}
 
 			&:not(.alignfull) {
 				width: #{'min( calc(100% - 60px), var(--f-container-width) )'};
+				@media #{$small_mobile} {
+					width: 100% !important;
+				}
 			}
 
 			&:not(.alignwide):not(.alignfull) {
 				max-width: var(--f-block-max-width);
+				@media #{$small_mobile} {
+					max-width: 100% !important;
+				}
 			}
 		}
 
@@ -350,13 +359,13 @@ body {
 		// text-transform: var(--f-text-transform);
 		// text-decoration: var(--f-text-decoration);
 
-		&:first-child {
-			margin-top: 0px;
-		}
+		// &:first-child {
+		// 	margin-top: 0px;
+		// }
 
-		&:last-child {
-			margin-bottom: 0px;
-		}
+		// &:last-child {
+		// 	margin-bottom: 0px;
+		// }
 	}
 }
 
@@ -364,11 +373,11 @@ body {
 	margin-bottom: var(--f-content-spacing);
 
 	&:first-child {
-		margin-top: 0px !important;
+		margin-top: 0px;
 	}
 
 	&:last-child:not(.no-inline-space) {
-		margin-bottom: 0px !important;
+		margin-bottom: 0px;
 	}
 }
 
@@ -463,18 +472,347 @@ body {
 		filter: brightness(106%) contrast(100%) saturate(46%) blur(0px) hue-rotate(360deg);
 	}
 }
-
+/** Header **/
+.home {
+	.fundly-header {
+		background-color: #fff;
+	}
+}
+html .fundly-header {
+	.wp-block-columns {
+		@media #{$small_mobile} {
+			width: 90% !important;
+		}
+	}
+}
 .fundly-header {
 	position: absolute;
 	top: 0px;
 	left: 0;
 	right: 0px;
 	z-index: 900;
+	transition: background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s;
+
+	&__logo {
+		.wp-block-image {
+			margin: 0px !important;
+		}
+	}
+	@media #{$small_mobile} {
+		&__logo {
+			flex-basis: 80% !important;
+		}
+		&__menu {
+			flex-basis: 20%;
+			.wp-block-navigation__responsive-container {
+				top: 0px;
+				margin-left: 0px !important;
+				margin-right: 0px !important;
+				width: 100% !important;
+			}
+			.wp-block-navigation {
+				justify-content: flex-end !important;
+				.wp-block-navigation__responsive-container-open {
+					width: auto !important;
+					margin-left: 0px !important;
+					margin-right: 0px !important;
+				}
+
+			}
+			.wp-block-navigation__submenu-container {
+				box-shadow: none !important;
+			}
+		}
+		&__right-btn {
+			display: none;
+		}
+	}
+	&.navbar_fixed {
+		position: fixed;
+		background: #fff;
+		box-shadow: 0 9px 35px rgb(0 0 0 / 5%);
+		.wp-block-navigation__container li a {
+			color: #6A6A6A;
+		}
+	}
+	.wp-block-navigation__container {
+		li {
+			a {
+				font-family: "Open Sans", Sans-serif;
+				font-size: 16px;
+				font-weight: 600;
+				line-height: 21px;
+				color: #fff;
+			}
+			.wp-block-navigation__submenu-container {
+				position: absolute;
+				top: 30px;
+				text-align: left;
+				left: 0;
+				transition: all .3s;
+				background-color: #fff;
+				box-shadow: 0 10px 20px rgb(17 17 17 / 10%);
+				padding: 5px 10px 5px 10px;
+				border: 0px;
+				width: 100%;
+				min-width: 200px;
+				li {
+					a {
+						color: #6A6A6A;
+					}
+				}
+			}
+		}
+	}
 }
-.admin-bar .fundly-header {
-	top: 32px;
+.fundly-scrolling-logo {
+	&:not(.navbar_fixed) {
+		.wp-block-navigation__responsive-container-open {
+			svg {
+				fill: #fff;
+			}
+		}
+	}
+	.fundly-main-logo {
+		display: block;
+	}
+	.fundly-scroll-logo {
+		display: none;
+	}
+	&.navbar_fixed {
+		.fundly-main-logo {
+			display: none;
+		}
+		.fundly-scroll-logo {
+			display: block;
+		}
+	}
+}
+.bg {
+	&-white {
+		background-color: #fff;
+	}
+}
+.bg-white, .bg-op {
+	&.fundly-header {
+		.wp-block-navigation__container {
+			li {
+				a {
+					font-family: "Open Sans", Sans-serif;
+					font-size: 16px;
+					font-weight: 600;
+					line-height: 21px;
+					color: #6A6A6A;
+				}
+			}
+		}
+	}
 }
 
-.fundly-header ~ #primary > .entry-content {
+.admin-bar {
+	.fundly-header {
+		top: 32px;
+	}
+	.sticky_nav {
+		.navbar {
+			top: 0px;
+			max-width: 100% !important;
+			width: 100% !important;
+			right: 0;
+		}
+	}
+	.navbar_fixed {
+		.navbar {
+			top: 32px;
+		}
+	}
+}
+
+.fundly-header ~ #primary > .entry-content, #page {
     margin: 0px !important;
+}
+/** Mobile Menu **/
+body .fundly-header .wp-block-navigation__responsive-container {
+	@media #{$small_mobile} {
+		width: 60% !important;
+		left: auto !important;
+	}
+}
+
+/** Content **/
+.entry-content {
+	@media #{$small_mobile} {
+		// padding-left: 2em !important;
+		// padding-right: 2em !important;
+	}
+}
+
+.fundly-center {
+	display: flex;
+    justify-content: center;
+}
+.fundly-w-50 {
+	width: 44% !important;
+    gap: 15px;
+	> div {
+		flex-basis: auto !important;
+	}
+}
+/** Posts **/
+.fundly-posts {
+	li {
+		border: 1px solid #EFEDED;
+		padding: 32px 40px;
+		text-align: left;
+		margin-bottom: 30px;
+		&:hover {
+			.wp-block-latest-posts__featured-image img {
+				// transform: scale(1.1);
+			}
+		}
+		.wp-block-latest-posts__featured-image {
+			margin: -32px -40px 30px -40px;
+			a {
+				width: 100%;
+				img {
+					width: 100% !important;
+					border-top-left-radius: 5px;
+					border-top-right-radius: 5px;
+					transition: all 1.5s cubic-bezier(0, 0, 0.2, 1);
+				}
+			}
+		}
+		time {
+			font-size: 16px;
+			margin-bottom: 10px;
+		}
+		> a {
+			font-size: 28px;
+			line-height: 1.35;
+			color: #14162e;
+			font-weight: 600;
+			transition: color 0.2s linear;
+			margin: 0 0 20px;
+			word-break: break-word;
+			order: 2;
+		}
+		.wp-block-latest-posts__post-excerpt {
+			line-height: 1.8;
+			margin-top: 0;
+			order: 3;
+		}
+	}
+}
+/** Footer **/
+.fundly-footer-nav {
+	ul {
+		gap: 14px;
+	}
+}
+.fundly-causes-list {
+	li {
+		padding-left: 0px;
+	}
+}
+.border-t-w {
+	border-top: 1px solid #fff;
+}
+.border-t-b {
+	border-top: 1px solid #373737;
+}
+.footer-bottom {
+	.wp-block-columns {
+		padding: 15px 0px !important;
+		color: #8A8A8A !important;
+		border-top: 1px solid #373737;
+		a {
+			color: #8A8A8A !important;
+		}
+	}
+}
+/** Home Styles **/
+.home-one-styles {
+	a {
+		&:hover {
+			color:#00ce72 !important;
+		}
+	}
+}
+.home-two-styles {
+	a {
+		&:hover {
+			color:#FFAC00 !important;
+		}
+	}
+}
+.home-three-styles {
+	a {
+		&:hover {
+			color:#F05A41 !important;
+		}
+	}
+}
+.w-full {
+	width: 100% !important;
+}
+
+/** Give Form **/
+.give-form-style-two {
+	.give-currency-symbol {
+		display: none;
+	}
+	p {
+		margin-bottom: 1.5em !important;
+		line-height: 30px !important;
+	}
+	ol {
+		line-height: 30px !important;
+	}
+}
+
+/** Team Page Image Block **/
+.fundly-team .wp-block-image img {
+	width: 100%;
+}
+
+/** Links **/
+.links-with-hover-o {
+	a {
+		color: #00ce72;
+		&:hover {
+			color: #413535;
+		}
+	}
+}
+
+/** Slider Nav **/
+.home-one-navs {
+	.dl-recent-projects-navigation {
+		li {
+			&:hover {
+				background-color: #00ce72;
+			}
+		}
+	}
+}
+.home-two-navs {
+	.dl-causes-carousel-block__nav {
+		div {
+			&:hover {
+				background-color: #FFAC00;
+				border-color: #FFAC00;
+			}
+		}
+	}
+}
+.home-three-navs {
+	.swiper-advs-buttons {
+		div {
+			color: #F05A41;
+			&:hover {
+				background-color: #F05A41;
+				color: #fff;
+			}
+		}
+	}
 }
